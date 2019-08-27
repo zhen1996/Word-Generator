@@ -8,11 +8,11 @@
 
 将fxml文件加载功能包装为类LoaderFxml类的load静态方法,供以调用,在菜单事件的处理器中直接调用该方法,省去了大量的重复代码.
 
-##2.针对标记预处理
+## 2.针对标记预处理
 
 由于标记预处理的过程完全可以让PreMark来完成,所以将标记预处理的过程移动到MyTool包中的PreMark类中完成,且封闭了之前开放的getDescriptions,getLocations,getNumbers方法,使之成为一个完全的工具类,此时可将controller中无意义的setPreMark方法移除.
 
-##3.将不合理的WorkBeansList重写:
+## 3.将不合理的WorkBeansList重写:
 
 改写WorkBeanList中的底层数据结构,将之前不合理的List结构改为自己可控的双向链表,使得对图片的操作都能在O(1)的时间内完成.(之前有些操作为O(n)).
 
@@ -50,7 +50,7 @@
 
  删除之前无意义的ImportWordThread类,将导出功能的代码放在ImportWord中进行更好的组织.
 
-##2.针对代码中的不合理设计
+## 2.针对代码中的不合理设计
 
 将频繁使用的目标文件target和Freemaker中的Template设为成员变量,并在构造方法中进行初始化.
 
@@ -85,4 +85,3 @@
 - 修改了鼠标移动到大约右下侧会清除数据展示区的bug:使用MouseClicked事件来代替MouseExisted事件.
 - 新增对标记展示的动态换行,使之不超过水平最大范围.
 - 解决了导出的Word文档表格会跨页的问题.
-
