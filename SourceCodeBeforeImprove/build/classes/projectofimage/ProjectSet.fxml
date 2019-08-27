@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectofimage.ProjectSetController">
+   <children>
+      <MenuBar pickOnBounds="false" prefHeight="30.0" prefWidth="1600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="项目">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#setNewProject" text="新建项目" />
+                  <MenuItem mnemonicParsing="false" onAction="#openProject" text="打开项目" />
+                  <MenuItem mnemonicParsing="false" onAction="#manageProject" text="项目组织" />
+                  <MenuItem mnemonicParsing="false" onAction="#manageMark" text="标记管理" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+              <items>
+                <MenuItem mnemonicParsing="false" text="联系作者qq790848138" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="web">
+              <items>
+                <MenuItem mnemonicParsing="false" text="敬请期待" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" spacing="5.0">
+               <children>
+                  <StackPane prefHeight="30.0" prefWidth="1200.0">
+                     <children>
+                        <Label fx:id="label" text="项目名字" />
+                     </children>
+                  </StackPane>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1200.0">
+                     <children>
+                        <StackPane prefHeight="100.0" prefWidth="100.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#imageInputUseDir" prefHeight="100.0" prefWidth="90.0" text="文件夹">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="100.0" prefWidth="1000.0" vbarPolicy="NEVER">
+                           <content>
+                              <HBox fx:id="imageList" alignment="CENTER_LEFT" pickOnBounds="false" prefHeight="100.0" prefWidth="1000.0" spacing="10.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </HBox>
+                           </content>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </ScrollPane>
+                        <StackPane prefHeight="100.0" prefWidth="100.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#imageInputUseFile" prefHeight="100.0" prefWidth="90.0" text="图片">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="400.0" prefWidth="1200.0">
+                     <children>
+                        <StackPane prefHeight="400.0" prefWidth="1000.0">
+                           <children>
+                              <ImageView fx:id="imageShow" fitHeight="400.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </StackPane>
+                        <VBox alignment="CENTER" prefHeight="500.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <StackPane prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#previousImage" prefHeight="50.0" prefWidth="200.0" text="上一张" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#nextImage" prefHeight="50.0" prefWidth="200.0" text="下一张" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#deletCurentImage" prefHeight="50.0" prefWidth="200.0" text="删除" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane hgap="10.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#importWord" prefHeight="90.0" prefWidth="90.0" text="导Word">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" text="导PPT" GridPane.columnIndex="1">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" text="导EXel" GridPane.rowIndex="1">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#importProject" prefHeight="90.0" prefWidth="90.0" text="导项目" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="informationShow" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="200.0" text="信息提示区" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="300.0" prefWidth="1200.0" spacing="5.0">
+                     <children>
+                        <VBox prefHeight="300.0" prefWidth="300.0" spacing="5.0">
+                           <children>
+                              <StackPane prefHeight="40.0" prefWidth="300.0">
+                                 <children>
+                                    <Label text="自定义描述" />
+                                 </children>
+                              </StackPane>
+                              <TextArea fx:id="setOwnDescriptionArea" onMouseExited="#setOwnDescripton" prefHeight="250.0" prefWidth="300.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="300.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <StackPane prefHeight="40.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="自定义位置" />
+                                 </children>
+                              </StackPane>
+                              <TextArea fx:id="setOwnLocationArea" onMouseExited="#setOwnLocation" prefHeight="250.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="300.0" prefWidth="80.0" spacing="5.0">
+                           <children>
+                              <StackPane prefHeight="40.0" prefWidth="80.0">
+                                 <children>
+                                    <Label text="自定义数量" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="250.0" prefWidth="80.0">
+                                 <children>
+                                    <TextField fx:id="setOwnNumberField" onMouseExited="#setOwnNumber" prefHeight="40.0" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="300.0" prefWidth="300.0" spacing="5.0">
+                           <children>
+                              <StackPane prefHeight="40.0" prefWidth="300.0">
+                                 <children>
+                                    <Label text="描述" />
+                                 </children>
+                              </StackPane>
+                              <Label fx:id="descriptionShow" alignment="TOP_LEFT" prefHeight="250.0" prefWidth="300.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="300.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <StackPane prefHeight="40.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="位置" />
+                                 </children>
+                              </StackPane>
+                              <Label fx:id="locationShow" alignment="TOP_LEFT" prefHeight="250.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="300.0" prefWidth="80.0" spacing="5.0">
+                           <children>
+                              <StackPane prefHeight="40.0" prefWidth="80.0">
+                                 <children>
+                                    <Label text="数量" />
+                                 </children>
+                              </StackPane>
+                              <Label fx:id="numberShow" alignment="TOP_LEFT" prefHeight="250.0" prefWidth="80.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="300.0" spacing="5.0">
+               <children>
+                  <StackPane prefHeight="30.0" prefWidth="400.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="400.0" text="预设描述选择" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="380.0" prefWidth="300.0">
+                     <children>
+                        <ListView fx:id="chooserOfDescription" onMouseExited="#setPreDescripton" prefHeight="380.0" prefWidth="300.0" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="30.0" prefWidth="400.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="400.0" text="预设位置选择" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="240.0" prefWidth="300.0">
+                     <children>
+                        <ListView fx:id="chooserOfLocation" onMouseExited="#setPreLocation" prefHeight="240.0" prefWidth="300.0" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="30.0" prefWidth="400.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="400.0" text="预设数量选择" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="120.0" prefWidth="300.0">
+                     <children>
+                        <ListView fx:id="chooserOfNumber" onMouseExited="#setPreNumber" prefHeight="120.0" prefWidth="300.0" />
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

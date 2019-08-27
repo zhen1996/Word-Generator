@@ -1,0 +1,38 @@
+ิดฃบ
+<w:pict>
+<v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f"><v:stroke joinstyle="miter" />
+<v:formulas>
+<v:f eqn="if lineDrawn pixelLineWidth 0" />
+<v:f eqn="sum @0 1 0" /><v:f eqn="sum 0 0 @1" />
+<v:f eqn="prod @2 1 2" /><v:f eqn="prod @3 21600 pixelWidth" />
+<v:f eqn="prod @3 21600 pixelHeight" />
+<v:f eqn="sum @0 0 1" /><v:f eqn="prod @6 1 2" />
+<v:f eqn="prod @7 21600 pixelWidth" /><v:f eqn="sum @8 21600 0" />
+<v:f eqn="prod @7 21600 pixelHeight" /><v:f eqn="sum @10 21600 0" />
+</v:formulas><v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect" />
+<o:lock v:ext="edit" aspectratio="t" /></v:shapetype>
+<w:binData w:name="${imageName1}" xml:space="preserve">${image1}</w:binData>
+<v:shape id="Picture 344" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:332.65pt;height:249.35pt;visibility:visible;mso-wrap-style:square"><v:imagedata src="${imageName1}" o:title="" /></v:shape>
+</w:pict>Name
+
+<w:pict><w:binData w:name="wordml://02000002.jpg" xml:space="preserve">${image2}</w:binData>
+<v:shape id="Picture 346" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:332.65pt;height:249.35pt;visibility:visible;mso-wrap-style:square"><v:imagedata src="wordml://02000002.jpg" o:title="" /></v:shape>
+</w:pict>
+
+
+
+<w:binData w:name="wordml://02000001.jpg" xml:space="preserve">
+<v:shape id="Picture 344" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:332.4pt;height:249.6pt;visibility:visible;mso-wrap-style:square">
+<v:imagedata src="wordml://02000001.jpg" o:title=""/>
+
+<w:binData w:name="wordml://02000002.jpg" xml:space="preserve">
+<v:shape id="Picture 346" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:333pt;height:249.6pt;visibility:visible;mso-wrap-style:square">
+<v:imagedata src="wordml://02000002.jpg" o:title=""/>
+
+<v:shape id="_x0000_i1027" type="#_x0000_t75" style="width:332.4pt;height:249.6pt;visibility:visible;mso-wrap-style:square">
+<v:imagedata src="wordml://02000001.jpg" o:title=""/>
+
+
+<v:shape id="_x0000_i1028" type="#_x0000_t75" style="width:333pt;height:249.6pt;visibility:visible;mso-wrap-style:square">
+<v:imagedata src="wordml://02000002.jpg" o:title=""/>
+
