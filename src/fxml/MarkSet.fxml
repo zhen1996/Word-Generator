@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MarkSetController">
+   <children>
+      <MenuBar pickOnBounds="false" prefHeight="30.0" prefWidth="1600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="项目">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#setNewProject" text="新建项目" />
+                  <MenuItem mnemonicParsing="false" onAction="#manageMark" text="标记管理" />
+                  <MenuItem mnemonicParsing="false" onAction="#openProject" text="打开项目" />
+                  <MenuItem mnemonicParsing="false" onAction="#manageProject" text="项目组织" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="联系作者qq790848138" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="web">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="敬请期待" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1300.0" spacing="20.0">
+         <children>
+            <Label alignment="CENTER" prefWidth="300.0" text="描述标记列表" />
+            <Label alignment="CENTER" prefWidth="200.0" text="控制栏" />
+            <Label alignment="CENTER" prefWidth="200.0" text="位置标记列表" />
+            <Label alignment="CENTER" prefWidth="200.0" text="控制栏" />
+            <Label alignment="CENTER" prefWidth="150.0" text="数量标记列表" />
+            <Label alignment="CENTER" prefWidth="150.0" text="控制栏" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" spacing="20.0">
+         <children>
+            <StackPane prefHeight="800.0" prefWidth="300.0">
+               <children>
+                  <ListView fx:id="desList" prefHeight="800.0" prefWidth="300.0" />
+               </children>
+            </StackPane>
+            <VBox alignment="CENTER" prefHeight="800.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#deleteChoosenDes" text="删除" textFill="#686262">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextArea fx:id="desEditor" prefHeight="400.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#addEditedDes" text="新增" />
+               </children>
+            </VBox>
+            <StackPane prefHeight="800.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="locList" prefHeight="800.0" prefWidth="200.0" />
+               </children>
+            </StackPane>
+            <VBox alignment="CENTER" prefHeight="800.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#deleteChoosenLoc" text="删除" />
+                  <TextArea fx:id="locEditor" prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#addEditedLoc" text="新增" />
+               </children>
+            </VBox>
+            <StackPane prefHeight="800.0" prefWidth="150.0">
+               <children>
+                  <ListView fx:id="numList" prefHeight="800.0" prefWidth="150.0" />
+               </children>
+            </StackPane>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#deleteChoosenNum" text="删除" />
+                  <TextArea fx:id="numEditor" prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#addEditedNum" text="新增" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="200.0" prefWidth="1300.0">
+         <children>
+            <StackPane prefHeight="200.0" prefWidth="1100.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#save" prefHeight="100.0" prefWidth="300.0" text="保存">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="infoShow" text="请编辑" />
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
